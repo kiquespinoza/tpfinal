@@ -42,3 +42,4 @@ df3.to_sql('orders_items', conn, if_exists='replace')
 df4.to_sql('products', conn, if_exists='replace')
 df5.to_sql('payment', conn, if_exists='replace')
 
+conn.close()
