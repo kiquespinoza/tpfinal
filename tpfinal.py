@@ -8,3 +8,8 @@ df4 = pd.read_csv(r'C:\Users\eespice\Desktop\tp2\pds\ecommerce_orders_dataset.cs
 df5 = pd.read_csv(r'C:\Users\eespice\Desktop\tp2\pds\ecommerce_products_dataset.csv')
 
 
+df1.set_index('customer_id', inplace = True)
+df2.set_index('order_id', inplace = True) 
+df3.set_index('order_id', inplace = True)
+df4.set_index('order_id', inplace = True)
+df5.set_index('product_id', inplace = True)
