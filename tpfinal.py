@@ -17,3 +17,6 @@ df5.set_index('product_id', inplace = True)
 
 total_orders = df1.index.nunique()
 print(f'numero total de pedidos realizados : {total_orders}')
+
+avg_payment_per_order = df3['payment_value'].mean()
+print(f'promedio de valor de pago por pedido: {avg_payment_per_order}')
