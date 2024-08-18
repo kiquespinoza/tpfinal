@@ -20,3 +20,10 @@ print(f'numero total de pedidos realizados : {total_orders}')
 
 avg_payment_per_order = df3['payment_value'].mean()
 print(f'promedio de valor de pago por pedido: {avg_payment_per_order}')
+
+merged_df = pd.merge(df2, df5, on='product_id')
+
+most_sold_category = merged_df.groupby('product_category_name')['order_item_id'].count().idxmax()
+print(f'la categoria de producto mas vendida es: {most_sold_category}')
+
+
