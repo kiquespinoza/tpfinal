@@ -32,4 +32,13 @@ total_orders = df2.index.nunique()
 print(f'numero total de pedidos realizados:{total_orders}')
 
 
+import sqlite3 
+
+conn = sqlite3.connect('ecommerce.db')
+
+df1.to_sql('customers', conn, if_exists='replace')
+df2.to_sql('orders', conn, if_exists='replace')
+df3.to_sql('orders_items', conn, if_exists='replace')
+df4.to_sql('products', conn, if_exists='replace')
+df5.to_sql('payment', conn, if_exists='replace')
 
